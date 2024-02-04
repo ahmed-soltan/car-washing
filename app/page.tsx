@@ -55,8 +55,8 @@ const Home = ({ searchParams }: any) => {
         <div className="home__filters">
           <Searchbar setModel={setModel} setManufacturer={setManufacturer}/>
           <div className="home__filter-container">
-            <CustomFilter title="fuel" options={fuels} setFilter={setFuel}/>
-            <CustomFilter title="year" options={yearsOfProduction} setFilter={setYear}/>
+          <CustomFilter title="fuel" options={fuels} setFilter={(filter) => setFuel(filter.value)} />
+<CustomFilter title="year" options={yearsOfProduction} setFilter={(filter) => setYear(filter.value)} />
           </div>
         </div>
         {cars.length>0 ? (
